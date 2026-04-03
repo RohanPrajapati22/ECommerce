@@ -1,0 +1,139 @@
+<app-header></app-header>
+
+<main class="cart-page">
+  <div class="cart-container">
+    <div class="cart-header">
+      <h1 class="cart-title">SHOPPING CART</h1>
+      @if (cartItems.length > 0) {
+        <button class="clear-btn" (click)="clearCart()">CLEAR ALL</button>
+      }
+    </div>
+
+    @if (cartItems.length > 0) {
+      <div class="cart-content">
+        <div class="cart-items">
+          @for (item of cartItems; track item.product.id) {
+            <div class="cart-item">
+              <div class="item-image">
+                <img [src]="item.product.image" [alt]="item.product.name" />
+              </div>
+              <div class="item-details">
+                <h3 class="item-name">{{ item.product.name }}</h3>
+                <p class="item-price">${{ item.product.price.toFixed(2) }}</p>
+              </div>
+              <div class="item-quantity">
+                <button 
+                  class="qty-btn"
+                  (click)="updateQuantity(item, -1)"
+                  [disabled]="item.quantity <= 1"
+                >
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+                <span class="qty-value">{{ item.quantity }}</span>
+                <button class="qty-btn" (click)="updateQuantity(item, 1)">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                  </svg>
+                </button>
+              </div>
+              <div class="item-total">
+                ${{ getItemTotal(item).toFixed(2) }}
+              </div>
+              <button class="remove-btn" (click)="removeItem(item.product.id)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
+          }
+        </div>
+
+        <div class="cart-summary">
+          <h2 class="summary-title">ORDER SUMMARY</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span>${{ total.toFixed(2) }}</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span class="free">FREE</span>
+          </div>
+          <div class="summary-row total">
+            <span>TOTAL</span>
+            <span>${{ total.toFixed(2) }}</span>
+          </div>
+          <button class="checkout-btn">CHECKOUT</button>
+          <a routerLink="/" class="continue-shopping">CONTINUE SHOPPING</a>
+        </div>
+      </div>
+    } @else {
+      <div class="empty-cart">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <h2>YOUR CART IS EMPTY</h2>
+        <p>Add some products to your cart</p>
+        <a routerLink="/" class="shop-now-btn">START SHOPPING</a>
+      </div>
+    }
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: CONTACT -->
+    <div class="footer-column contact">
+      <h4>Contact</h4>
+      <p>ftribe Co., Ltd</p>
+
+      <p>📍 1658 Rosewood Lane<br>New York city, NY</p>
+      <p>📞 <span class="highlight">212 929 9953</span></p>
+      <p>✉️ <span class="highlight">adminftribe.com</span></p>
+    </div>
+
+    <!-- MIDDLE: COOPERATION -->
+    <div class="footer-column">
+      <h4>Cooperation - Association</h4>
+      <ul>
+        <li>Operation Regulation of EC-Exchange</li>
+        <li>Return Policy</li>
+        <li>Privacy Policy</li>
+        <li>Selling With ftribe</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: CUSTOMER SUPPORT -->
+    <div class="footer-column">
+      <h4>Customer Support</h4>
+      <ul>
+        <li>Hotline Customer Service</li>
+        <li class="highlight">212 929 9953</li>
+        <li>Frequently Asked Questions</li>
+        <li>Submit Support Request</li>
+        <li>Ordering Guide</li>
+        <li>Shipping Methods</li>
+      </ul>
+    </div>
+
+    <!-- EXTRA RIGHT -->
+    <div class="footer-column">
+      <h4>&nbsp;</h4>
+      <ul>
+        <li>Installment Purchase Guide</li>
+        <li>Import Policy</li>
+        <li>Customer Support:</li>
+        <li class="highlight">customerftribe.com</li>
+        <li>Security Error Report:</li>
+        <li class="highlight">admintribe.com</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>

@@ -1,0 +1,318 @@
+{
+  "categories": [
+    { "id": "all", "name": "All Products", "icon": "grid", "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=400&fit=crop" },
+    { "id": "electronics", "name": "Electronics", "icon": "devices", "image": "https://images.unsplash.com/photo-1498049794561-7780e7231661?w=400&h=400&fit=crop" },
+    { "id": "clothing", "name": "Clothing", "icon": "checkroom", "image": "https://images.unsplash.com/photo-1445205170230-053b83016050?w=400&h=400&fit=crop" },
+    { "id": "home", "name": "Home & Garden", "icon": "home", "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=400&fit=crop" },
+    { "id": "sports", "name": "Sports", "icon": "sports", "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400&h=400&fit=crop" },
+    { "id": "books", "name": "Books", "icon": "menu_book", "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=400&fit=crop" },
+    { "id": "realestate", "name": "Real Estate", "icon": "home", "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=400&h=400&fit=crop" },
+    { "id": "technology", "name": "Technology", "icon": "devices", "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&h=400&fit=crop" },
+    { "id": "watch", "name": "Watch", "icon": "watch", "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop" },
+    { "id": "glasses", "name": "Glasses", "icon": "glasses", "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=400&h=400&fit=crop" },
+    { "id": "cosmetic", "name": "Cosmetic", "icon": "cosmetic", "image": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=400&fit=crop" },
+    { "id": "food", "name": "Food High Grade", "icon": "food", "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&h=400&fit=crop" }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Wireless Bluetooth Headphones",
+      "description": "Premium noise-canceling headphones with 30-hour battery life",
+      "price": 149.99,
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop",
+      "rating": 4.5,
+      "stock": 15
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch Pro",
+      "description": "Advanced fitness tracking with heart rate monitor and GPS",
+      "price": 299.99,
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 8
+    },
+    {
+      "id": 3,
+      "name": "Minimalist Leather Jacket",
+      "description": "Genuine leather jacket with modern slim fit design",
+      "price": 249.99,
+      "category": "clothing",
+      "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+      "rating": 4.6,
+      "stock": 12
+    },
+    {
+      "id": 4,
+      "name": "Classic Denim Jeans",
+      "description": "Comfortable stretch denim with classic 5-pocket style",
+      "price": 79.99,
+      "category": "clothing",
+      "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=400&h=400&fit=crop",
+      "rating": 4.3,
+      "stock": 25
+    },
+    {
+      "id": 5,
+      "name": "Modern Floor Lamp",
+      "description": "Adjustable LED floor lamp with touch dimmer control",
+      "price": 129.99,
+      "category": "home",
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=400&h=400&fit=crop",
+      "rating": 4.4,
+      "stock": 10
+    },
+    {
+      "id": 6,
+      "name": "Ceramic Plant Pot Set",
+      "description": "Set of 3 handmade ceramic pots with bamboo trays",
+      "price": 45.99,
+      "category": "home",
+      "image": "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400&h=400&fit=crop",
+      "rating": 4.7,
+      "stock": 30
+    },
+    {
+      "id": 7,
+      "name": "Yoga Mat Premium",
+      "description": "Extra thick eco-friendly yoga mat with carrying strap",
+      "price": 59.99,
+      "category": "sports",
+      "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&h=400&fit=crop",
+      "rating": 4.5,
+      "stock": 20
+    },
+    {
+      "id": 8,
+      "name": "Running Shoes Elite",
+      "description": "Lightweight performance running shoes with cushioned sole",
+      "price": 139.99,
+      "category": "sports",
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 18
+    },
+    {
+      "id": 9,
+      "name": "The Art of Code",
+      "description": "Bestselling programming guide for beginners and experts",
+      "price": 29.99,
+      "category": "books",
+      "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 50
+    },
+    {
+      "id": 10,
+      "name": "Mindful Living",
+      "description": "A guide to meditation and mindful daily practices",
+      "price": 24.99,
+      "category": "books",
+      "image": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=400&fit=crop",
+      "rating": 4.6,
+      "stock": 35
+    },
+    {
+      "id": 11,
+      "name": "Portable Bluetooth Speaker",
+      "description": "Waterproof speaker with 360-degree sound and 20hr battery",
+      "price": 89.99,
+      "category": "electronics",
+      "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=400&h=400&fit=crop",
+      "rating": 4.4,
+      "stock": 22
+    },
+    {
+      "id": 12,
+      "name": "Cashmere Sweater",
+      "description": "Luxuriously soft cashmere blend sweater in neutral tones",
+      "price": 189.99,
+      "category": "clothing",
+      "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop",
+      "rating": 4.7,
+      "stock": 14
+    },
+    {
+      "id": 13,
+      "name": "Luxury Villa with Pool",
+      "description": "Spacious 4-bedroom villa with modern amenities and private pool",
+      "price": 850000,
+      "category": "realestate",
+      "image": "https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 3
+    },
+    {
+      "id": 14,
+      "name": "Modern City Apartment",
+      "description": "2-bedroom apartment in city center with stunning views",
+      "price": 320000,
+      "category": "realestate",
+      "image": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=400&h=400&fit=crop",
+      "rating": 4.6,
+      "stock": 5
+    },
+    {
+      "id": 15,
+      "name": "Beachfront Bungalow",
+      "description": "Cozy beachfront bungalow with direct ocean access",
+      "price": 450000,
+      "category": "realestate",
+      "image": "https://images.unsplash.com/photo-1499793983690-b29ba5b2a6ae?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 2
+    },
+    {
+      "id": 16,
+      "name": "MacBook Pro 16-inch",
+      "description": "Powerful laptop with M3 chip, 18GB RAM, 512GB SSD",
+      "price": 2499.99,
+      "category": "technology",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 10
+    },
+    {
+      "id": 17,
+      "name": "iPhone 15 Pro Max",
+      "description": "Latest iPhone with titanium design and advanced camera system",
+      "price": 1199.99,
+      "category": "technology",
+      "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 15
+    },
+    {
+      "id": 18,
+      "name": "iPad Pro 12.9",
+      "description": "Professional tablet with M2 chip and Liquid Retina display",
+      "price": 1099.99,
+      "category": "technology",
+      "image": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=400&h=400&fit=crop",
+      "rating": 4.7,
+      "stock": 8
+    },
+    {
+      "id": 19,
+      "name": "Rolex Submariner",
+      "description": "Luxury diving watch with automatic movement",
+      "price": 14500,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1587836374828-4dbafa94cf0e?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 3
+    },
+    {
+      "id": 20,
+      "name": "Omega Speedmaster",
+      "description": "Classic chronograph watch with moonphase complication",
+      "price": 7200,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 4
+    },
+    {
+      "id": 21,
+      "name": "Seiko Automatic",
+      "description": "Japanese automatic watch with transparent caseback",
+      "price": 450,
+      "category": "watch",
+      "image": "https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?w=400&h=400&fit=crop",
+      "rating": 4.6,
+      "stock": 12
+    },
+    {
+      "id": 22,
+      "name": "Ray-Ban Aviator",
+      "description": "Classic aviator sunglasses with gold frame",
+      "price": 175,
+      "category": "glasses",
+      "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop",
+      "rating": 4.7,
+      "stock": 20
+    },
+    {
+      "id": 23,
+      "name": "Oakley Holbrook",
+      "description": "Sport sunglasses with Prizm lens technology",
+      "price": 145,
+      "category": "glasses",
+      "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=400&h=400&fit=crop",
+      "rating": 4.5,
+      "stock": 18
+    },
+    {
+      "id": 24,
+      "name": "Prada Cat Eye",
+      "description": "Elegant cat eye glasses with醋酸纤维框架",
+      "price": 395,
+      "category": "glasses",
+      "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 8
+    },
+    {
+      "id": 25,
+      "name": "La Mer Moisturizer",
+      "description": "Luxury face cream with Miracle Broth",
+      "price": 380,
+      "category": "cosmetic",
+      "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 15
+    },
+    {
+      "id": 26,
+      "name": "SK-II Essence",
+      "description": "Famous facial treatment essence with PITERA",
+      "price": 179,
+      "category": "cosmetic",
+      "image": "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 25
+    },
+    {
+      "id": 27,
+      "name": "Chanel Perfume",
+      "description": "Iconic Chanel No. 5 Eau de Parfum",
+      "price": 135,
+      "category": "cosmetic",
+      "image": "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=400&fit=crop",
+      "rating": 4.7,
+      "stock": 30
+    },
+    {
+      "id": 28,
+      "name": "Wagyu A5 Beef",
+      "description": "Premium Japanese Wagyu A5 beef, 500g package",
+      "price": 299.99,
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=400&fit=crop",
+      "rating": 4.9,
+      "stock": 10
+    },
+    {
+      "id": 29,
+      "name": "Truffle Oil Premium",
+      "description": "Authentic white truffle oil from Italy, 100ml",
+      "price": 89.99,
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1472476443507-c7a5948772fc?w=400&h=400&fit=crop",
+      "rating": 4.6,
+      "stock": 20
+    },
+    {
+      "id": 30,
+      "name": "Organic Caviar",
+      "description": "Premium organic caviar, 100g tin",
+      "price": 249.99,
+      "category": "food",
+      "image": "https://images.unsplash.com/photo-1585664811087-47f65abbad64?w=400&h=400&fit=crop",
+      "rating": 4.8,
+      "stock": 8
+    }
+  ]
+}

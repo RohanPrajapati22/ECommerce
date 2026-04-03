@@ -1,0 +1,156 @@
+<app-header (searchQuery)="onSearch($event)"></app-header>
+
+<main class="main-content">
+  <section class="hero">
+    <div class="hero-slider" [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=1400&h=500&fit=crop" alt="Banner 1" class="hero-image">
+        <div class="hero-content">
+          <h1 class="hero-title">NEW COLLECTION</h1>
+          <p class="hero-subtitle">Discover the latest trends</p>
+          <a href="#products" class="hero-btn">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&h=500&fit=crop" alt="Banner 2" class="hero-image">
+        <div class="hero-content">
+          <h1 class="hero-title">SUMMER SALE</h1>
+          <p class="hero-subtitle">Up to 50% off</p>
+          <a href="#products" class="hero-btn">SHOP NOW</a>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1400&h=500&fit=crop" alt="Banner 3" class="hero-image">
+        <div class="hero-content">
+          <h1 class="hero-title">PREMIUM QUALITY</h1>
+          <p class="hero-subtitle">Best products at best prices</p>
+          <a href="#products" class="hero-btn">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+    <button class="hero-nav prev" (click)="prevSlide()">&#10094;</button>
+    <button class="hero-nav next" (click)="nextSlide()">&#10095;</button>
+    <div class="hero-dots">
+      @for (slide of [0, 1, 2]; track slide) {
+        <span 
+          class="hero-dot" 
+          [class.active]="currentSlide === slide"
+          (click)="goToSlide(slide)"
+        ></span>
+      }
+    </div>
+  </section>
+
+  <section class="categories-section" id="categories">
+    <div class="section-header">
+      <h2 class="section-title">CATEGORIES</h2>
+    </div>
+    <div class="categories-slider">
+      @for (category of categories; track category.id) {
+        <button 
+          class="category-slide"
+          [class.active]="selectedCategory === category.id"
+          (click)="onCategorySelect(category.id)"
+        >
+          <img [src]="category.image" [alt]="category.name" class="category-image">
+          <span class="category-name">{{ category.name }}</span>
+        </button>
+      }
+    </div>
+  </section>
+
+
+  @if (selectedCategory === 'all') {
+    @for (category of categories; track category.id) {
+      @if (category.id !== 'all') {
+        <section class="category-products" id="products">
+          <div class="section-header">
+            <h2 class="section-title">{{ category.name | uppercase }}</h2>
+            <span class="product-count">{{ getProductsByCategory(category.id).length }} items</span>
+          </div>
+
+          @if (getProductsByCategory(category.id).length > 0) {
+            <div class="products-grid">
+              @for (product of getProductsByCategory(category.id); track product.id) {
+                <app-product-card 
+                  [product]="product"
+                  (addToCart)="onAddToCart($event)"
+                ></app-product-card>
+              }
+            </div>
+          }
+        </section>
+      }
+    }
+  } @else {
+    <section class="category-products" id="products">
+      <div class="section-header">
+        <h2 class="section-title">{{ getCategoryName() | uppercase }}</h2>
+        <span class="product-count">{{ products.length }} items</span>
+      </div>
+
+      @if (products.length > 0) {
+        <div class="products-grid">
+          @for (product of products; track product.id) {
+            <app-product-card 
+              [product]="product"
+              (addToCart)="onAddToCart($event)"
+            ></app-product-card>
+          }
+        </div>
+      }
+    </section>
+  }
+</main>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- LEFT: CONTACT -->
+    <div class="footer-column contact">
+      <h4>Contact</h4>
+      <p>ftribe Co., Ltd</p>
+
+      <p>📍 1658 Rosewood Lane<br>New York city, NY</p>
+      <p>📞 <span class="highlight">212 929 9953</span></p>
+      <p>✉️ <span class="highlight">adminftribe.com</span></p>
+    </div>
+
+    <!-- MIDDLE: COOPERATION -->
+    <div class="footer-column">
+      <h4>Cooperation - Association</h4>
+      <ul>
+        <li>Operation Regulation of EC-Exchange</li>
+        <li>Return Policy</li>
+        <li>Privacy Policy</li>
+        <li>Selling With ftribe</li>
+      </ul>
+    </div>
+
+    <!-- RIGHT: CUSTOMER SUPPORT -->
+    <div class="footer-column">
+      <h4>Customer Support</h4>
+      <ul>
+        <li>Hotline Customer Service</li>
+        <li class="highlight">212 929 9953</li>
+        <li>Frequently Asked Questions</li>
+        <li>Submit Support Request</li>
+        <li>Ordering Guide</li>
+        <li>Shipping Methods</li>
+      </ul>
+    </div>
+
+    <!-- EXTRA RIGHT -->
+    <div class="footer-column">
+      <h4>&nbsp;</h4>
+      <ul>
+        <li>Installment Purchase Guide</li>
+        <li>Import Policy</li>
+        <li>Customer Support:</li>
+        <li class="highlight">customerftribe.com</li>
+        <li>Security Error Report:</li>
+        <li class="highlight">admintribe.com</li>
+      </ul>
+    </div>
+
+  </div>
+</footer>

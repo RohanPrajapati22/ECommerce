@@ -1,0 +1,88 @@
+<header class="header">
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+<div class="top-left">
+  <img src="assets/facebook.png" alt="Facebook" />
+  <img src="assets/linkedin.png" alt="LinkedIn" />
+  <img src="assets/Group.png" alt="Twitter" />
+  <img src="assets/Email.png" alt="Email" />
+</div>
+
+    <div class="top-right">
+      <a href="#">Introduce</a>
+      <a href="#">Partner Incentives</a>
+      <a href="#">Promotion</a>
+      <a href="#">Contact</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+
+  <!-- MAIN HEADER -->
+  <div class="header-container">
+
+    <!-- LOGO -->
+    <a routerLink="/" class="logo">
+      <span class="logo-text">SHOP</span>
+      <span class="logo-highlight">CART</span>
+    </a>
+
+    <!-- SEARCH -->
+    <div class="search-bar">
+      <input 
+        type="text" 
+        placeholder="What are you looking for?"
+        [(ngModel)]="searchTerm"
+      />
+
+      <select [(ngModel)]="selectedCategory">
+        @for (category of categories; track category.id) {
+          <option [value]="category.id">{{ category.name }}</option>
+        }
+      </select>
+
+      <button (click)="onSearch()">Search</button>
+    </div>
+
+    <!-- ACTIONS (UNCHANGED LOGIC) -->
+<div class="header-actions">
+
+  <!-- HOME ICON -->
+  <a routerLink="/" class="nav-link">
+    <img src="assets/favorite.png" alt="Home" class="icon-img" />
+  </a>
+
+  <!-- CART ICON -->
+  <a routerLink="/cart" class="cart-link">
+    <img src="assets/cart.png" alt="Cart" class="icon-img" />
+
+    @if (cartCount > 0) {
+      <span class="cart-badge">{{ cartCount }}</span>
+    }
+  </a>
+
+</div>
+
+  </div>
+
+  <!-- BOTTOM NAV -->
+  <div class="bottom-nav">
+
+    <div class="left">
+      ☰ Category
+    </div>
+
+    <div class="center">
+      <a routerLink="/">Home</a>
+      <a href="#">New Product</a>
+      <a href="#">Promotion <span class="hot">HOT</span></a>
+    </div>
+
+    <div class="right">
+      <a href="#">Track Your Order</a>
+      <a href="#">Sign In / Register</a>
+    </div>
+
+  </div>
+
+</header>

@@ -1,0 +1,48 @@
+<article class="product-card">
+  <div class="product-image">
+    <img [src]="product.image" [alt]="product.name" loading="lazy" />
+  </div>
+
+  <div class="product-info">
+    <span class="product-category">{{ product.category }}</span>
+    <h3 class="product-name">{{ product.name }}</h3>
+    <p class="product-description">{{ product.description }}</p>
+    
+    <div class="product-rating">
+      @for (star of stars; track star) {
+        <svg 
+          class="star" 
+          [class.filled]="star < product.rating"
+          width="14" height="14" 
+          viewBox="0 0 24 24" 
+        >
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" fill="currentColor" stroke="currentColor" stroke-width="1"></polygon>
+        </svg>
+      }
+      <span class="rating-value">({{ product.rating }})</span>
+    </div>
+
+    <div class="product-footer">
+      <span class="product-price">${{ product.price.toFixed(2) }}</span>
+    </div>
+
+    <button 
+      class="add-to-cart-btn"
+      [class.in-cart]="isInCart()"
+      (click)="onAddToCart($event)"
+    >
+      @if (isInCart()) {
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+        <span>ADDED</span>
+      } @else {
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+        </svg>
+        <span>ADD TO CART</span>
+      }
+    </button>
+  </div>
+</article>
